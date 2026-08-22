@@ -176,7 +176,7 @@ print(short)
 #35. Find the first word that is a palindrome.
 #S = "this madam is here" "madam"
 
-s = input('Enter the string')
+s = input('Enter the string:  ')
 s1 = s.split()
 
 for i in range(len(s1)):
@@ -187,6 +187,7 @@ for i in range(len(s1)):
    if rev == word:
       print(s1[i])     
       break
+   
 
                
 

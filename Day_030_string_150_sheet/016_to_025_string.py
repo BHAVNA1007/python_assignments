@@ -105,25 +105,16 @@ if f==0:
 s = input('Enter the string: ')
 
 last = ''
-visited = ''
 
 for i in range(len(s)):
-
-    if s[i] not in visited:
-
-        count = 0
-
-        for j in range(len(s)):
-            if s[i] == s[j]:
-                count += 1
-
-        
-
-        if count > 1:
+            
+    for j in range(len(s)):
+            
+        if s[i] == s[j]:
+            
             last = s[i]
-
-        visited += s[i]
-
+            break
+            
 print('Last repeating character:', last)
 
 '''
@@ -160,7 +151,7 @@ else:
      
 '''
 #25. Count total number of words in a string.
-
+'''
 s = input('Enter the string: ')
 words = s.split()
 
@@ -170,7 +161,22 @@ for i in range(len(words)):
 
 print(count)
 
-      
+'''
+s = input('Enter the string: ')
+
+last = ''
+
+for i in range(len(s)):
+            
+    for j in range(len(s)):
+            
+        if s[i] == s[j]:
+            
+            last = s[i]
+            break
+            
+print('Last repeating character:', last)
+
              
 
           
