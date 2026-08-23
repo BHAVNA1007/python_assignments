@@ -105,17 +105,20 @@ if f==0:
 s = input('Enter the string: ')
 
 last = ''
-
 for i in range(len(s)):
-            
+    count = 0        
     for j in range(len(s)):
-            
         if s[i] == s[j]:
-            
-            last = s[i]
-            break
-            
-print('Last repeating character:', last)
+            count += 1
+
+        if count > 1:    
+           last = s[i]
+
+if last:
+   print('Last repeating character:', last)
+else:
+   print('no repeating character found ')
+
 
 '''
 '''
@@ -130,6 +133,21 @@ for i in range(len(s)):
           count += 1
    if count == 2:
        print(s[i],end=',')
+
+============
+
+s = input("s: ")
+s1 = ''
+for i in range(len(s)):
+    count = 0
+    for j in range(len(s)):
+        if s[i] == s[j]:
+            count += 1
+    if count == 2 and s[i] not in s1:
+        s1 += s[i]
+print(s1)
+
+
 '''
 
 '''
@@ -162,30 +180,3 @@ for i in range(len(words)):
 print(count)
 
 '''
-s = input('Enter the string: ')
-
-last = ''
-
-for i in range(len(s)):
-            
-    for j in range(len(s)):
-            
-        if s[i] == s[j]:
-            
-            last = s[i]
-            break
-            
-print('Last repeating character:', last)
-
-             
-
-          
-  
-       
- 
-
-
-
-
-                
-

@@ -89,12 +89,20 @@ for i in range(len(words)):
 #30. Replace a word with another word.
 #S = "old data", Old="old", New="new" "new data"
 
-s = input('Enter a string: ')
+s = input("s:  ")
+old = input("old: ")
+new = input("new: ")
 
-s1 = s.replace("Old","old")
-s2 = s.replace('New','new')
-#print(s1)
-print(s2)
+result = ''
+i = 0
+while i<len(s):
+    if s[i: i+len(old)]==old:
+        result += new
+        i += len(old)
+    else:
+        result += s[i]
+        i += 1
+print(result)            
 '''
 
 '''
